@@ -8,7 +8,7 @@ import { getPrismicClient } from '../services/prismic';
 import { FiCalendar, FiUser } from "react-icons/fi";
 
 import styles from './home.module.scss';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Header from '../components/Header';
 import Link from 'next/link';
 
@@ -56,7 +56,7 @@ export default function Home({ postsPagination }: HomeProps) {
   }
 
   return(
-    <>
+    <div className={styles.body}>
       <Head>
         <title>Home | spacetraveling</title>
       </Head>
@@ -100,7 +100,7 @@ export default function Home({ postsPagination }: HomeProps) {
         }
 
       </section>
-    </>
+    </div>
   )
 }
 
